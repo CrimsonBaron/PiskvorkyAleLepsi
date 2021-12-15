@@ -80,4 +80,21 @@ public class Localization implements com.piskvorky.localization.Localization {
         }
         return null;
     }
+
+    @Override
+    public String fieldSize() {
+        String local = prop.getProperty("fieldSize");
+        if (local != null){
+            return local;
+        }else{
+            try {
+                loadFile(Languages.DEFAULT);
+                local = prop.getProperty("fieldSize");
+                return local;
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return null;
+    }
 }

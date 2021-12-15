@@ -7,4 +7,5 @@ public interface Localization {
     String getPlayText();
     String getWonText();
     String errorText();
+    String fieldSize();
 }
