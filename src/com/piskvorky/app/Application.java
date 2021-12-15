@@ -3,6 +3,8 @@ package com.piskvorky.app;
 import com.piskvorky.localization.classes.Localization;
 import com.piskvorky.localization.enumerations.Languages;
 
+import com.piskvorky.logic.LogicClass;
+
 public class Application {
     public Application() {
 
