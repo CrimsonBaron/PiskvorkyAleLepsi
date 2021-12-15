@@ -14,15 +14,11 @@ public class LogicClass implements Logic {
     }
 
     @Override
-    public void printBoard(int width, int height) {
-        for (int i = 0; i < width; i++) {
-            for (int j = 0; j < height; j++) {
+    public void printBoard() {
 
-            }
-        }
-
-        return;
     }
+
+   
 
     @Override
     public boolean checkWin() {

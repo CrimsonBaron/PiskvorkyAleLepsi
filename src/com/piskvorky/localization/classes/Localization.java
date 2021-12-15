@@ -2,10 +2,7 @@ package com.piskvorky.localization.classes;
 
 import com.piskvorky.localization.enumerations.Languages;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.*;
 
 public class Localization implements com.piskvorky.localization.Localization {
@@ -20,8 +17,7 @@ public class Localization implements com.piskvorky.localization.Localization {
     }
 
     private void loadFile(Languages loc) throws IOException {
-        ClassLoader loader = Thread.currentThread().getContextClassLoader();
-        InputStream stream = loader.getResourceAsStream(loc.getFileLoc());
+        InputStream stream = new FileInputStream(loc.getFileLoc());
         prop.load(stream);
     }
 

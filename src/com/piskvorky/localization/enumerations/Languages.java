@@ -1,9 +1,9 @@
 package com.piskvorky.localization.enumerations;
 
 public enum Languages {
-    CZECH("./data/CZECH.properties"),
-    ENGLISH("./data/ENGLISH.properties"),
-    DEFAULT("./data/CZECH.properties");
+    CZECH("data/CZECH.properties"),
+    ENGLISH("data/ENGLISH.properties"),
+    DEFAULT("data/CZECH.properties");
 
     private String fileLoc;
 
