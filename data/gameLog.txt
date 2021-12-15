@@ -4,3 +4,6 @@ round: 2
 Player that has won: x
 The size of board is:  6 6
 round: 2
+Vyhral hrác: x
+velikost boardy je:  5 5
+round: 6

@@ -72,7 +72,7 @@ public class Board {
 
         for (int i = 0; i < gameBoard[0].length ; i++) {
             for (int j = 0; j <  gameBoard.length ; j++) {
-                if (getCell(i,j) == symbol){
+                if (getCell(j,i) == symbol){
                     localStreak++;
                 }else{
                     localStreak = 0;

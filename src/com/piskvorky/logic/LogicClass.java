@@ -84,17 +84,17 @@ public class LogicClass implements Logic {
 
         if (w > board.getW() || w < 0) {
             System.out.println(local.errorText());
-            round--;
+            //round--;
             return;
         }
         if (h > board.getH() || h < 0) {
             System.out.println(local.errorText());
-            round--;
+            //round--;
             return;
         }
         if (board.getCell(w, h) == Cell.ROUND || board.getCell(w, h) == Cell.CROSS) {
             System.out.println(local.errorText());
-            round--;
+            //round--;
             return;
         }
 
