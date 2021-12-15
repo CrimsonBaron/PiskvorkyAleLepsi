@@ -9,6 +9,7 @@ public class LogicClass implements Logic {
     private Board board;
     private int round;
     private Localization local;
+    private boolean play = false;
 
 
     public LogicClass(int w, int h) {
@@ -34,8 +35,11 @@ public class LogicClass implements Logic {
     }
 
     @Override
-    public boolean checkWin() {
-
+    public boolean checkWin(int w, int h, Cell cell) {
+        if (board.getCell(w-1,h-1) == cell && board.getCell(w+1,h+1) == cell ){
+            System.out.println(local.getWonText()+" "+cell.toString());
+            return true;
+        }
 
         return false;
     }
@@ -65,11 +69,18 @@ public class LogicClass implements Logic {
 
         if (round % 2 == 0) {
             board.setVal(w, h, Cell.CROSS);
+           play = checkWin(w,h,Cell.CROSS);
+
             round++;
         }
         board.setVal(w, h, Cell.ROUND);
 
+        play= checkWin(w,h,Cell.ROUND);
+
         round++;
     }
 
+    public boolean isPlay() {
+        return play;
+    }
 }

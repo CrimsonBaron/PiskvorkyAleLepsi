@@ -3,17 +3,18 @@ package com.piskvorky.app;
 import com.piskvorky.localization.classes.Localization;
 import com.piskvorky.localization.enumerations.Languages;
 
+import com.piskvorky.logic.Logic;
 import com.piskvorky.logic.LogicClass;
 
 public class Application {
+    LogicClass game = new LogicClass(5,5);
     public Application() {
 
     }
-    Localization loc=new Localization();
     public void Run(String[] args){
-        loc.setLocalization(Languages.DEFAULT);
-        System.out.println(loc.getPlayText());
-
+       while (game.isPlay()){
+           game.input();
+       }
     }
 
 }
