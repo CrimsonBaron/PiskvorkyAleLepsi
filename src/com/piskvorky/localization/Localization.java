@@ -1,7 +1,9 @@
 package com.piskvorky.localization;
 
+import com.piskvorky.localization.enumerations.Languages;
+
 public interface Localization {
-    void setLocalization(String s);
+    void setLocalization(Languages s);
     String getPlayText();
     String getWonText();
     String errorText();
