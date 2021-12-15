@@ -5,17 +5,17 @@ public enum Board {
     CROSS('x'),
     ROUND('o');
 
-    private char answer;
+    private char input;
 
     Board(char answer) {
-        this.answer = answer;
+        this.input = answer;
     }
 
     public char getAnswer() {
-        return answer;
+        return input;
     }
 
     public void setAnswer(char answer) {
-        this.answer = answer;
+        this.input = answer;
     }
 }
