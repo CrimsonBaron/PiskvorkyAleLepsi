@@ -1,8 +1,8 @@
 package com.piskvorky.logic;
 
 public interface Logic {
-    char[][] createBoard(int width, int height);
-    void printBoard();
+    Board createBoard(int width, int height);
+    void printBoard(Board board);
     boolean checkWin();
     void input();
 
